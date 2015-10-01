@@ -1,4 +1,4 @@
-/* estimates db size in KB */
+/* some text */
 SELECT
     t.NAME AS TableName,
     s.Name AS SchemaName,
