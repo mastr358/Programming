@@ -1,4 +1,5 @@
-/* some text */
+/* some other text */
+
 SELECT
     t.NAME AS TableName,
     s.Name AS SchemaName,
@@ -8,6 +9,7 @@ SELECT
     (SUM(a.total_pages) - SUM(a.used_pages)) * 8 AS UnusedSpaceKB
 FROM
     sys.tables t
+    
 INNER JOIN
     sys.indexes i ON t.OBJECT_ID = i.object_id
 INNER JOIN
