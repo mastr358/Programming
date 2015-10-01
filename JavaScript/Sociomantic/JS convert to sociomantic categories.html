@@ -1,0 +1,25 @@
+<script type="text/javascript">
+
+//get from Google dataLayer: Sekce, Kategorie, Uziti, Pohlavi, Znacka
+var HelpCat = [dataLayer[0].pageDepartment, 
+               dataLayer[0].pageMainCategory, 
+               dataLayer[0].pageUse, 
+               dataLayer[0].pageGender, 
+               dataLayer[0].pageBrand];
+
+var product = {"category":[]};
+
+//return only defined variables and write them into variable needed by Sociomantic
+product.category = GetCategories(HelpCat);
+
+//return defined categories from dataLayer into array
+function GetCategories(thisVar) {                                                      
+    var someVar = [];
+    for (i = 0; i < thisVar.length; i++) {
+          if (!(thisVar[i] === undefined)) {
+              someVar.push(thisVar[i]);
+          };
+    }  
+    return someVar;
+}
+</script>

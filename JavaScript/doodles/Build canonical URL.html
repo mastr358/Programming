@@ -1,0 +1,7 @@
+<!-- Link Canonical - změna již existujícího chybného odkazu -->
+<!-- Nedává smysl, raději jsme to zadali BSShopu. Robot pravděpodobně uvidí první URL, co pošle server. Tudíž nedává smysl ji přebíjet javascriptem. -->
+<script type="text/javascript">
+window.onload = function () {
+document.querySelector("link[rel='canonical']").href = window.location.href.split('?')[0];
+}
+</script>

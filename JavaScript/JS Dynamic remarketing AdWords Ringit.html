@@ -1,0 +1,61 @@
+<script>
+var DPH = 0.21;
+var pathArray = window.location.host.split( '.' );
+if (pathArray[2] == "cz") {var DPH = Number({{DPH CZ}})} else {var DPH = Number({{DPH SK}})}; 
+(function(){
+ try {
+    if (dataLayer[0].pageType == "Product") {
+       var prodid, totalvalue;
+       prodid = dataLayer[0].productId;
+       totalvalue = dataLayer[0].pagePrice / (1+DPH);
+       dataLayer.push({
+          'event': 'fireRemarketingTag',
+          'google_tag_params': {
+            'ecomm_prodid': prodid,
+            'ecomm_pagetype': 'product',
+            'ecomm_totalvalue': totalvalue
+          }
+         });
+    }
+    else if (dataLayer[0].pageType == "cart") {
+       var prodid, totalvalue;
+       prodid = [];
+       for	(index = 0; index < dataLayer[0]["transactionProducts"].length; index++) {      //fill the array 'products' with data from dataLayer
+          prodid.push(dataLayer[0]["transactionProducts"][index]["sku"]);
+       }
+       totalvalue = {{dl.transactionTotal}};
+       dataLayer.push({
+          'event': 'fireRemarketingTag',
+          'google_tag_params': {
+            'ecomm_prodid': prodid,
+            'ecomm_pagetype': 'cart',
+            'ecomm_totalvalue': totalvalue
+          }
+         });
+    }
+    else if (dataLayer[0].pageType == "purchase") {
+       var prodid, totalvalue;
+       prodid = [];
+       for	(index = 0; index < dataLayer[0]["transactionProducts"].length; index++) {      //fill the array 'products' with data from dataLayer
+          prodid.push(dataLayer[0]["transactionProducts"][index]["sku"]);
+       }
+       totalvalue = {{dl.transactionTotal}};
+       dataLayer.push({
+          'event': 'fireRemarketingTag',
+          'google_tag_params': {
+            'ecomm_prodid': prodid,
+            'ecomm_pagetype': 'purchase',
+            'ecomm_totalvalue': totalvalue
+          }
+         });
+    }
+    else {
+       dataLayer.push({
+          'event': 'fireRemarketingTag',
+          'google_tag_params': { }
+         });
+    }
+ }
+  catch (err) {}
+}) ();
+</script>

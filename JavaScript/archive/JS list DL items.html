@@ -1,0 +1,49 @@
+<script type="text/javascript">
+
+var dataLayer = [{
+  'pageType':'cart',
+  'visitorLoginState':'Anonymous',
+  'VisitorStatus':'Unidentified',
+  'transactionTotal':1932,
+  'transactionTax':406,
+  'transactionProducts':[
+  {
+    'name':'NIKE ALLIANCE JKT-FLEECE LINED',
+    'sku':'541484-010',
+    'category':'Zimní',
+    'price':1363,
+    'quantity':1},
+  {
+    'name':'adidas colorblock tribikini',
+    'sku':'G81350',
+    'category':'Dvoudílné',
+    'price':569,
+    'quantity':1}]}];
+
+var basket = dataLayer;
+
+var text;
+
+document.write(Array.isArray(dataLayer));
+
+for (var key in basket[0]) {                                                              //for each item in object basket[0]
+  if (Array.isArray(basket[0][key])) {                                                    //if this item is an array
+    var index;
+    for	(index = 0; index < basket[0][key].length; index++) {                             //list his objects one by one
+          for (var keyy in basket[0][key][index]) {                                       //and for each item in his object
+            if (basket[0][key][index].hasOwnProperty(keyy)) {                             //if the item has property
+              document.write(keyy + " -> " + basket[0][key][index][keyy]+ "<br>");        //write the property
+            }
+          }
+    }
+
+  } else if (basket[0].hasOwnProperty(key)) {                                             //if the item was not an array
+  document.write(key + " -> " + basket[0][key]+ "<br>");                                  //write his property
+  }
+} 
+
+
+//vrati nazev prvniho produktu v transactionProducts
+//document.write(basket[0].transactionProducts[0].name);
+</script>
+

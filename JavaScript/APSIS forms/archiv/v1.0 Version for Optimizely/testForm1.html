@@ -1,0 +1,103 @@
+<div id="NewsletterForm" class="mfp-hide mfp-with-anim" style="width: 610px; height: 280px; margin: 0 auto; font-weight: 300; background-color: white; padding: 30px; position: relative;">
+<form name="SubscriberForm" class="bs-disable-decorators" style="text-align:left; font-size: 12pt;" action="http://www.anpdm.com/public/process-subscription-form.aspx?formId=49405F4277424A5A4471" onSubmit="return CorrectEmailaddress(this);" method="post">
+<table cellspacing="0" cellpadding="2px">
+    <tr>
+        <td>
+            <div style="font-size: 50px; color: #de0000; list-style: none;">Získejte 200 Kč slevu!</div>
+            <ul style="list-style: none; padding-left: 0px; color: rgb(79, 79, 79);">
+                <li style="background: url('http://www.ringit.cz/data/user-content/ringit-cz/images/static-template/redsquare.png') no-repeat 0px 15px; padding-left: 15px; line-height: 2em;">Lorem ipsum dolor sit amet, consectetur adipiscing</li>
+                <li style="background: url('http://www.ringit.cz/data/user-content/ringit-cz/images/static-template/redsquare.png') no-repeat 0px 15px; padding-left: 15px; line-height: 2em;">Lorem ipsum dolor sit amet, consectetur</li>
+                <li style="background: url('http://www.ringit.cz/data/user-content/ringit-cz/images/static-template/redsquare.png') no-repeat 0px 15px; padding-left: 15px; line-height: 2em;">Lorem ipsum dolor sit amet, consectetur</li>
+            </ul>
+            
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+    </tr>
+    <!--tr>
+        <td>
+            Pohlavi<br />
+            <input class="bs-disable-decorators" type="radio" name="pf_Demographicfield9" value="Muž">
+            <input class="bs-disable-decorators" type="radio" name="pf_Demographicfield9" value="Žena">
+        </td>
+    </tr-->
+    <tr>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select type="hidden" name="pf_DeliveryFormat" style = "display:none;" class="bs-disable-decorators">
+            <option value="HTML" selected >HTML</option>
+            <option value="Text">Text</option></select>
+            <input type="text" name="pf_Email" value="Váš e-mail..." size="30" onfocus="if (this.value == 'Váš e-mail...') {this.value=''; $(this).css('color','rgb(60,60,60)')}" style="
+                width: 265px; 
+                height: 44px; 
+                padding: 0 10px; 
+                color: #bababa;
+                border-color: #bababa; 
+                border-style: solid; 
+                border-width: 1px;">
+            <input type="submit" name="Submit" value="Odeslat"
+            onClick="    
+                dataLayer.push({'event':'ga.event', 'eCategory': 'popup', 'eAction': 'subscribe', 'eLabel': inPopups.variant });
+                $.cookie('PopupSubscribed', 1000, { expires : 1800 });
+                dataLayer[0].email = $('input[name=pf_Email]').val();
+                console.log('Newsletter subscribed!');" 
+            style="
+                background: url('http://www.ringit.cz/data/user-content/ringit-cz/images/newsletter-popup/btn_prihlaseni.png') no-repeat;
+                width: 97px;
+                height: 45px;
+                border: none;
+                font-weight: 400;
+                color: white;
+                font-size: large;
+            ">
+        </td>
+    </tr>
+
+    <tr>
+        <td style="font-size: 15px; color: rgb(79, 79, 79);">Buď v klidu, odhlásit se můžeš kdykoliv!</td>
+    </tr>
+    <tr>
+        <td>
+            <!-- Do not change name or type on submit button, to change visible text, change text for \"value\" -->
+            <input type="hidden" name="pf_FormType" value="OptInForm">
+            <input type="hidden" name="pf_OptInMethod" value="SingleOptInMethod">
+            <input type="hidden" name="pf_CounterDemogrFields" value="0">
+            <input type="hidden" name="pf_CounterMailinglists" value="1">
+            <input type="hidden" name="pf_AccountId" value="17136">
+            <input type="hidden" name="pf_ListById" value="1">
+            <input type="hidden" name="pf_Version" value="2">
+            <input type="hidden" name="pf_redir" value="http://www.ringit.cz">
+            <input type="hidden" name="pf_Demographicfield25" value="popup">
+            
+            <input type="hidden" name="pf_MailinglistName1" value="832741">
+        </td>
+    </tr>
+    <!-- martin-test: 832741, ringit.cz: 845749 -->
+</table>
+</form>
+<img id="Venda" src="http://www.ringit.cz/data/user-content/ringit-cz/images/newsletter-popup/venda_img.png" alt="Získej 200 Kč!" style="position: absolute; bottom: 0; right: -30px;">
+<div id="CloseButton" class="mfp-close" style=" width: 36px;
+    height: 36px;
+    background: url('http://www.ringit.cz/data/user-content/ringit-cz/images/newsletter-popup/krizek.png') center center no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    "></div>
+</div>
+<!-- Konec kódu pro formulář newsletteru -->
+
+<!-- Thank you popup -->
+<div id="NewsletterThanks" class="mfp-hide mfp-with-anim" style="width: 400px; margin: 0 auto; background-color: white; font-weight: 300; font-size: 17px; padding: 20px;">
+<div style="font-size: 35px; color: #de0000">Zaznamenali jsme vaši odpověď! </div><br />
+Na email vám bylo zasláno potvrzení. <br />
+Brzy budou následovat další skvělé novinky!
+</div>
+
+<!-- End of Thank you popup -->

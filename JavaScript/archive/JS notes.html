@@ -1,0 +1,124 @@
+<script type="text/javascript">
+var prodid = new Array();
+prodid[0] = "34343877";
+prodid[1] = "34343878";
+prodid[2] = "34343879";
+prodid[3] = "34343880";
+
+var prodprice = new Array();
+prodprice[0] = 2.99;
+prodprice[1] = 2.99;
+prodprice[2] = 2.99;
+prodprice[3] = 2.99;
+
+var prodcur = new Array();
+prodcur[0] = 'EUR';
+prodcur[1] = 'EUR';
+prodcur[2] = 'CZK';
+prodcur[3] = 'CZK';
+
+var prodq = new Array();
+prodq[0] = 2;
+prodq[1] = 3;
+prodq[2] = 2;
+prodq[3] = 4;
+
+for (i=0;i<prodid.length;i++)
+document.write(prodid[i] + "<br >");
+document.write(prodprice[i] + "<br >");
+document.write(prodcur[i] + "<br >");
+document.write(prodq[i] + "<br >");
+
+
+var dataLayer = [{'pageType':'cart',
+'visitorLoginState':'Anonymous',
+'VisitorStatus':'Unidentified',
+'transactionTotal':1932,
+'transactionTax':406,
+'transactionProducts':[{'name':'NIKE ALLIANCE JKT-FLEECE LINED',
+'sku':'541484-010',
+'category':'Zimní',
+'price':1363,
+'quantity':1},
+{'name':'adidas colorblock tribikini',
+'sku':'G81350',
+'category':'Dvoudílné',
+'price':569,
+'quantity':1}]}];
+
+
+var autojedna = {jmeno:"Saab", cena:200000};
+var autodva = {jmeno:"volvo", cena:500000};
+var autotri = {jmeno:"bmw", cena:1000000};
+
+var cars = [autojedna, autodva, autotri];
+document.write(cars[0].jmeno);
+
+var cars = ["autojedna":"Saab", "autodva":"Volvo", "autotri":"BMW"];
+      
+//?????
+//basket = gtm_products;
+
+
+document.write(scripts[2]); // Output is JavaScript 
+</script>
+
+ aas
+<br> 
+               
+<script type="text/javascript">
+document.write(dataLayer["pageType"]);
+</script>
+               
+<script type="text/javascript">
+document.write(cars["autojedna"]);
+
+
+// gets the objects in array "basket"
+var index;
+var text;
+for	(index = 0; index < basket.length; index++) {
+    text += basket[index];
+}
+
+document.write(text);
+//------------------------------------------------------------------------------
+
+//returns first pageType item in basket
+//document.write(basket[0].pageType);
+
+//------------------------------------------------------------------------------
+
+// gets the list of values from object
+//for (var key in basket[0]) {
+//  if (basket[0].hasOwnProperty(key)) {
+//    document.write(key + " -> " + basket[0][key]+ "<br>");
+//  }
+//}
+
+//------------------------------------------------------------------------------
+
+//vrati nazev prvniho produktu v transactionProducts
+//document.write(basket[0].transactionProducts[0].name);
+
+//------------------------------------------------------------------------------
+
+//je dataLayer array?
+//document.write(Array.isArray(dataLayer));
+
+//------------------------------------------------------------------------------
+
+// define socio as object with array inside
+var socio = {};
+
+var socio = {"products": [         //socio.products
+            {"tricko": 111},       //socio.products[0]
+            {"boty": 222}          //socio.products[1]
+            ]                 
+};
+
+socio.products.push({"plavky": 555});  //socio.products.[2]
+document.write(socio.products[2].plavky); //return plavky
+
+//------------------------------------------------------------------------------
+</script>

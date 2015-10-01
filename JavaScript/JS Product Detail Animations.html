@@ -1,0 +1,108 @@
+<script type="text/javascript">
+
+</script>
+
+<style type="text/css">
+@-moz-keyframes dropBuy {
+    0% {
+        -moz-transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        -moz-transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes dropBuy {
+    0% {
+        -webkit-transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes dropBuy {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+        display: block!important;
+    }
+}
+
+
+
+ 
+.buy.button {
+  left: -108px;
+  opacity: 1;
+ -moz-animation-name: dropBuy;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.5s;
+
+    -webkit-animation-name: dropBuy;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.5s;
+
+    animation-name: dropBuy;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+
+}
+
+@-moz-keyframes dropSizesBox {
+    0% {
+        max-height: 0;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        max-height: 900px;
+    }
+}
+@-webkit-keyframes dropSizesBox {
+    0% {
+        max-height: 0;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        max-height: 900px;
+    }
+}
+@keyframes dropSizesBox {
+    0% {
+        max-height: 0;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        max-height: 900px;
+    }
+}
+
+.PDVariantSelector .page {
+    max-height: 900px;
+    overflow: hidden;
+    opacity: 1;
+
+    -webkit-animation-name: dropSizesBox;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 1s;
+
+    animation-name: dropSizesBox;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.0s;
+
+}
+</style>
